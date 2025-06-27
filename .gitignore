@@ -1,0 +1,489 @@
+# Algo-Axis Trading Platform - Comprehensive .gitignore
+# This file excludes sensitive, temporary, and generated files from version control
+
+# ================================
+# PYTHON SPECIFIC
+# ================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+trading-env/
+algo-env/
+market-data-env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ================================
+# DOCKER & CONTAINERIZATION
+# ================================
+
+# Docker build context
+.dockerignore
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Container runtime files
+.docker/
+docker-data/
+container-logs/
+
+# Docker volumes and bind mounts
+volumes/
+docker-volumes/
+postgres-data/
+redis-data/
+rabbitmq-data/
+timescaledb-data/
+
+# Kubernetes
+*.kubeconfig
+k8s-secrets/
+helm-charts/values-*.yaml
+
+# Docker Swarm
+docker-stack.yml
+
+# ================================
+# ENVIRONMENT & SECRETS
+# ================================
+
+# Environment files (CRITICAL for trading systems)
+.env
+.env.*
+.environment
+.envrc
+
+# Trading-specific credential files
+broker_credentials.json
+api_keys.yaml
+trading_secrets.yml
+market_data_keys.json
+broker_config.json
+
+# SSL/TLS certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+ssl-certs/
+certificates/
+
+# SSH keys
+id_rsa
+id_ecdsa
+id_ed25519
+*.pub
+
+# AWS credentials
+.aws/
+aws-credentials
+
+# Google Cloud credentials
+gcloud-credentials.json
+service-account.json
+
+# ================================
+# FINANCIAL DATA & TRADING FILES
+# ================================
+
+# Market data files
+/data/market-data/live/
+/data/market-data/real-time/
+/data/market-data/tick/
+*.csv
+*.parquet
+*.h5
+*.hdf5
+*.feather
+*.arrow
+
+# Trading logs and reports
+/logs/trading/
+/logs/live-trading/
+/logs/execution/
+trading-*.log
+execution-*.log
+risk-*.log
+
+# Backtest results and analysis
+/data/backtests/results/
+/data/backtests/reports/
+backtest-*.html
+backtest-*.pdf
+performance-report-*.pdf
+
+# Strategy files (may contain proprietary algorithms)
+/strategies/live/
+/strategies/production/
+proprietary-strategies/
+alpha-strategies/
+
+# Portfolio and position files
+portfolio-*.json
+positions-*.csv
+trades-*.json
+pnl-*.csv
+
+# Risk management files
+risk-reports/
+var-calculations/
+stress-test-results/
+
+# Machine learning models and training data
+/models/trained/
+/models/production/
+*.pkl
+*.joblib
+*.model
+*.h5
+model-weights/
+training-data/
+features/
+
+# ================================
+# DATABASES
+# ================================
+
+# PostgreSQL
+*.sql
+postgres-backups/
+pg_data/
+postgresql-data/
+
+# TimescaleDB
+timescaledb-backups/
+timescale-dumps/
+
+# Redis
+redis-backups/
+*.rdb
+*.aof
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Database migration files (keep structure, ignore data)
+alembic-data/
+migration-data/
+
+# ================================
+# DEVELOPMENT TOOLS & IDEs
+# ================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ================================
+# MONITORING & LOGGING
+# ================================
+
+# Log files
+*.log
+logs/
+log/
+trading-logs/
+system-logs/
+
+# Monitoring data
+prometheus-data/
+grafana-data/
+elasticsearch-data/
+kibana-data/
+
+# Performance profiling
+*.prof
+profiling-results/
+
+# ================================
+# OPERATING SYSTEM
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# NETWORKING & SECURITY
+# ================================
+
+# Network configuration
+network-config/
+firewall-rules/
+proxy-config/
+
+# Security scanning results
+security-reports/
+vulnerability-scans/
+
+# ================================
+# PACKAGE MANAGERS
+# ================================
+
+# npm (for any frontend components)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Bower
+bower_components/
+
+# ================================
+# BUILD TOOLS & CI/CD
+# ================================
+
+# Build directories
+build/
+dist/
+target/
+
+# CI/CD artifacts
+.github/workflows/secrets/
+.gitlab-ci-local/
+ci-artifacts/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform-plan
+
+# Ansible
+*.retry
+ansible-vault-password
+
+# ================================
+# TEMPORARY & CACHE FILES
+# ================================
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+tmp/
+temp/
+
+# Cache directories
+cache/
+.cache/
+__pycache__/
+
+# Swap files
+*.swp
+*.swo
+
+# ================================
+# TRADING PLATFORM SPECIFIC
+# ================================
+
+# Broker-specific files
+interactive_brokers/private/
+alpaca/credentials/
+td_ameritrade/tokens/
+
+# Real-time data feeds
+live-feeds/
+streaming-data/
+tick-data-cache/
+
+# Strategy execution state
+strategy-state/
+execution-state/
+order-state/
+
+# Risk management alerts
+risk-alerts/
+limit-breaches/
+
+# Performance monitoring
+performance-data/
+latency-logs/
+throughput-metrics/
+
+# A/B testing results
+ab-test-results/
+strategy-comparisons/
+
+# Compliance and audit
+audit-trails/
+compliance-reports/
+regulatory-filings/
+
+# ================================
+# SPECIAL NOTES FOR TRADING SYSTEMS
+# ================================
+
+# ALWAYS exclude these for security:
+# - API keys and credentials
+# - Live trading configuration
+# - Proprietary strategy parameters
+# - Real portfolio positions
+# - Actual trading results
+# - Customer/client data
+
+# NEVER commit:
+# - Production database connections
+# - Broker account credentials  
+# - Real money trading configurations
+# - Live market data subscriptions
+# - Proprietary algorithmic models
